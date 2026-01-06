@@ -10,7 +10,6 @@ SOURCE_DIR=/path/to/source/repo PUBLIC_DIR=/path/to/document/root ./website_cd.s
 
 Maybe you want to create a shell script executable.
 
-/path/to/cron/script
 ```bash
 #!/bin/bash
 set -euo pipefail
@@ -31,6 +30,6 @@ It`s nice to add the script to cron.
 ```bash
 crontab
 
-* * * * * /path/to/cron/script
+* * * * * /path/to/script
 ```
 
