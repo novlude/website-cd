@@ -10,9 +10,8 @@ SOURCE_DIR=/path/to/source/repo PUBLIC_DIR=/path/to/document/root ./website_cd.s
 
 Maybe you want to create a shell script executable.
 
+/path/to/cron/script
 ```bash
-vim /path/to/cron/script
-
 #!/bin/bash
 set -euo pipefail
 
