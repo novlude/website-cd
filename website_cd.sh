@@ -1,8 +1,6 @@
 #!/bin/bash
 set -euo pipefail
 
-SCRIPT_DIR=$(realpath "$(dirname $0)")
-
 cd "${SOURCE_DIR}"
 git fetch
 
@@ -11,4 +9,5 @@ if [[ -z $(git rev-list HEAD..origin/main) ]]; then
 	exit 0
 fi
 
-${SCRIPT_DIR}/deploy.sh
+git pull
+rsync -a --delete "${SOURCE_DIR}"/html "${PUBLIC_DIR}"
